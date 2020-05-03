@@ -1,0 +1,685 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap');
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+*{
+  padding:0;
+  margin:0;
+}
+
+.chart{
+  width: 400px;
+  height: 400px;
+  margin:auto auto;
+  display: inline-block;
+}
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+header {
+    position:absolute;
+    left:0px;
+    right:0px;
+    border-bottom: 1px solid #423940;
+    padding:0px 15px;
+    z-index:11;
+  }
+  header .row{
+    justify-content: space-between;
+    align-items:center;
+}
+header .brand-name a{
+    text-decoration:none;
+    font-size:22px;
+    font-weight:600;
+    color:#ffffff;
+    text-transform:uppercase;
+    position:relative;
+    
+}
+header .brand-name a::before{
+    content: '';
+    height: 3px;
+    background-color:#ffffff;
+    width:100%;
+    position:absolute;
+    left:0px;
+    bottom:0px;
+}
+header.fixed .brand-name a{
+    color: #000000;
+}
+header .navbar ul{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+header .navbar ul li{
+    display: inline-block;
+    margin-left: 35px;
+}
+header .navbar ul li a{
+    font-size:15px;
+    text-decoration:none;
+    line-height:60px;
+    color:#ffffff;
+    display :block;
+    position:relative;
+    font-weight:600;
+}
+header.fixed .navbar ul li a{
+    color: #000000;
+    line-height:50px;
+}
+header  .navbar ul li a::before{
+    content: '';
+    height: 3px;
+    background-color:#ffffff;
+    width:0%;
+    position:absolute;
+    right:0px;
+    bottom:-1px;
+    transition:all .5s ease;
+}
+header.fixed  .navbar ul li a::before{
+    background-color: #000000;
+}
+header  .navbar ul li a:hover::before{
+    width:100%;
+    left:0;
+}
+header  .navbar ul li a.active::before{
+    width:100%;
+    left:0;
+    background-color: #ffffff;
+}
+header.fixed  .navbar ul li a.active::before{
+    width:100%;
+    left:0;
+    background-color: #000000;
+}
+  header.fixed{
+    position: fixed;
+    background-color: #ffffff;
+    border-color: #eeeeee;
+    animation: fixHeader .3s ease;
+    z-index:11;
+}
+
+@keyframes fixHeader{
+  0%{
+      transform: translateY(-100%);
+  }
+  100%{
+      transform: translateY(-100%);
+  }
+}
+   
+ header .header-inner .logo {
+    position: relative;
+    display: inline;
+  }
+  header .header-inner .logo a {
+    position: relative;
+    display: inline;
+    color: #FFFFFF;
+    outline: 0px none;
+    outline: 0px;
+    text-decoration: none;
+    transition: transform .3s;
+    text-transform: uppercase;
+  }
+ header .header-inner .logo a:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.30);
+  }
+ header .header-inner .logo a span {
+    font-weight: 700;
+  }
+  
+   section.slideshow {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    margin: 80px auto;
+    visibility: hidden;
+    overflow: hidden;
+  }
+ section.slideshow ul.navigation {
+    position: absolute;
+    display: block;
+    width: 640px;
+    height: 640px;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 50%;
+    margin-top: -320px;
+    z-index: 10;
+  }
+  
+ section.slideshow ul.navigation li.navigation-item {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0%;
+    transition: border 0.6s ease-in-out;
+  }
+  
+ section.slideshow ul.navigation li.navigation-item .rotate-holder {
+    position: fixed;
+    display: block;
+    width: 0;
+    height: 0;
+    left: -9999px;
+    top: -9999px;
+  }
+   section.slideshow ul.navigation li.navigation-item .background-holder {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;    
+    background-size: cover;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out;
+  }
+   section.slideshow ul.navigation li.navigation-item:hover .background-holder {
+    opacity: 0.75;
+  }
+   section.slideshow ul.navigation li.navigation-item.active .background-holder {
+    opacity: 0;
+    visibility: hidden;
+  }
+   section.slideshow .detail {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 8;
+  }
+   section.slideshow .detail .detail-item {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+   section.slideshow .detail .detail-item .headline {
+    position: absolute;
+    display: block;
+    width: 100%;
+    max-width: calc(100% - 480px);
+    height: 126px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: visible;
+    white-space: nowrap;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+ 
+   section.slideshow .detail .detail-item .headline .letter {
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    visibility: hidden;
+    color: #FFFFFF;
+    font-size: 132px;
+    line-height: 110px;
+    font-weight: 900;
+    font-kerning: none;
+    white-space: nowrap;
+    box-sizing: border-box;
+    text-transform: uppercase;
+  }
+  
+   section.slideshow .detail .detail-item .background {
+    position: absolute;
+    display: block;
+    width: 100%;
+    width: calc(100% + 100px);
+    height: 100%;
+    height: calc(100% + 100px);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: visible;
+    background-repeat: no-repeat;
+    background-position: center center;     
+    background-size: cover;
+    z-index: 1;
+  }
+
+   section.slideshow .detail .detail-item .background::before {
+    content: ""; 
+    background: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0) 90%);   
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+      
+  }
+   section.slideshow .detail .detail-item.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  section.slideshow .detail .detail-item .background .info-content .info{
+    padding:30px;
+    flex: 0 0 40%;
+    max-width: 40%;
+    text-align: center;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 110px;
+    color: white;
+  }
+
+
+  @media(max-width: 991px){
+    .home .home-content .block h1{
+        font-size: 50px;
+    }
+    
+    .home .home-content .block h3{
+        font-size: 25px;
+    }
+    .home{
+    min-height: 80vh;
+    background-image: url(images/b.jpg);
+    background-size:cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+    
+    padding:15px;
+}
+    header{
+        padding: 15px;
+        position: fixed;
+        background-color: #ffffff;
+        border:none;
+        border-bottom:1px solid #eeeeee;
+
+    }
+    header .brand-name a{
+        color: #000000;
+    }
+    
+    .ham-burger .fa{
+        display: inline-block;
+    }
+    header  .navbar ul li a.active::before{
+    width:100%;
+    left:0;
+    background-color: #febd01;
+}
+    .navbar{
+       position: absolute;
+       background-color: #f0f0f0;
+       width: 100%;
+       left:0px;
+       top:55px;
+       padding: 15px;
+       border-top:1px solid #eeeeee;
+       display: none;
+       border-bottom:1px solid #eeeeee;
+   }
+   .navbar.show{
+        display: block;
+   }
+    header .navbar ul li{
+        display: block;
+        margin-left: 0;
+    }
+    header .navbar ul li a{
+        line-height: 25px;
+        color: #000000;
+    }
+    header .navbar ul li a::before{
+        background-color: #febd01;
+    }
+    section.slideshow ul.navigation {
+    width: 900px;
+    height: 900px;
+    padding: 0;
+    margin: 20px;
+    left: 0;
+    margin-top: -800px;
+    z-index: 10;
+  }
+  section.slideshow ul.navigation li.navigation-item {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0%;
+    transition: border 0.6s ease-in-out;
+  }
+
+  section.slideshow .detail .detail-item .headline {
+    position: absolute;
+    display: block;
+    top: 35%;
+    left: 70%;
+    overflow: visible;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+  section.slideshow .detail .detail-item .headline .letter {
+    font-size: 100px;
+    line-height: 0px;
+  }
+  section.slideshow .detail .detail-item .background {
+    width: 100%;
+    height: 100%;
+  }
+  section.slideshow .detail .detail-item .background .info-content .info{
+    padding:30px;
+    flex: 0 0 90%;
+    top:35%;
+    right:30px;
+    max-width: 90%;
+    flex-wrap: wrap;
+    color: white;
+    font-size: 30px;
+    margin-top: 400px;
+  }
+  .chart{
+    width: 400px;
+    height: 400px;
+    margin:auto auto;
+    display: inline-block;
+  }
+  }   
+
+@media(max-width: 769px){
+  .home .home-content .block h1{
+      font-size:40px;
+  }
+  .home .home-content .block h3{
+      font-size: 25px;
+  }
+  
+  .home{
+  min-height: 100vh;
+  height:0;
+  background-image: url(images/b.jpg);
+  background-position:center center;
+  background-repeat: no-repeat;
+  
+  padding:15px;
+}
+  header{
+      padding: 15px;
+      position: fixed;
+      background-color: #ffffff;
+      border:none;
+      border-bottom:1px solid #eeeeee;
+
+  }
+  header .brand-name a{
+      color: #000000;
+  }
+  
+  .ham-burger .fa{
+      display: inline-block;
+  }
+  header  .navbar ul li a.active::before{
+    width:100%;
+    left:0;
+    background-color: #febd01;
+}
+  .navbar{
+     position: absolute;
+     background-color: #f0f0f0;
+     width: 100%;
+     left:0px;
+     top:55px;
+     padding: 15px;
+     border-top:1px solid #eeeeee;
+     display: none;
+     border-bottom:1px solid #eeeeee;
+ }
+ .navbar.show{
+      display: block;
+ }
+  header .navbar ul li{
+      display: block;
+      margin-left: 0;
+  }
+  header .navbar ul li a{
+      line-height: 35px;
+      color: #000000;
+  }
+  header .navbar ul li a::before{
+      background-color: #febd01;
+  }
+
+  section.slideshow ul.navigation {
+    
+    width: 540px;
+    height: 540px;
+    padding: 0;
+    margin: 20px;
+    left: 0;
+    margin-top: -300px;
+    z-index: 10;
+  }
+  section.slideshow ul.navigation li.navigation-item {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0%;
+    transition: border 0.6s ease-in-out;
+  }
+  
+  section.slideshow .detail .detail-item .headline {
+    position: absolute;
+    display: block;
+    width: 100%;
+    max-width: calc(100% - 480px);
+    top: 45%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    overflow: visible;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+ 
+   section.slideshow .detail .detail-item .headline .letter {
+    font-size: 70px;
+    line-height: 110px;
+  }
+
+  section.slideshow .detail .detail-item .background {
+    width: 100%;
+    height: 90%;
+  }
+  section.slideshow .detail .detail-item .background::before{
+  background: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0) 100%);
+   }
+  
+  section.slideshow .detail .detail-item .background .info-content .info{
+    padding:30px;
+    top:20%;
+    flex: 0 0 40%;
+    max-width: 40%;
+    text-align: center;
+    flex-wrap: wrap;
+    position: absolute;
+    right: 0px;
+    color: white;
+    font-size: 10px;
+  }
+.chart{
+  width: 100%;
+  height: 100%;
+  margin:auto auto;
+  display: inline-block;
+}
+}
+
+
+
+@media(max-width: 500px){
+   section.slideshow ul.navigation {
+    
+    width: 400px;
+    height: 400px;
+    padding: 0;
+    margin: 20px;
+    left: 0;
+    margin-top: -350px;
+    z-index: 10;
+  }
+  section.slideshow ul.navigation li.navigation-item {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0%;
+    transition: border 0.6s ease-in-out;
+  }
+
+  section.slideshow .detail .detail-item .headline {
+    position: absolute;
+    display: block;
+    top: 40%;
+    left: 40%;
+    overflow: visible;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+  section.slideshow .detail .detail-item .headline .letter {
+    font-size: 50px;
+    line-height: 0px;
+  }
+  section.slideshow .detail .detail-item .background {
+    width: 100%;
+    height: 100%;
+  }
+section.slideshow .detail .detail-item .background::before{
+  background: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0) 100%);
+   }
+  section.slideshow .detail .detail-item .background .info-content .info{
+    padding:30px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    top:5%;
+    color: white;
+    font-size: 10px;
+    margin-top: 400px;
+  }
+  .chart{
+    width: 200px;
+    height:200px;
+    margin:auto auto;
+    display: inline-block;
+  }
+}
+@media(max-height: 360px){
+   section.slideshow ul.navigation {
+    
+    width: 300px;
+    height: 300px;
+    padding: 0;
+    margin: 20px;
+    left: 0;
+    margin-top: -250px;
+    z-index: 10;
+  }
+  section.slideshow ul.navigation li.navigation-item {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0%;
+    transition: border 0.6s ease-in-out;
+  }
+
+  section.slideshow .detail .detail-item .headline {
+    position: absolute;
+    display: block;
+    top: 45%;
+    left: 40%;
+    overflow: visible;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+  section.slideshow .detail .detail-item .headline .letter {
+    font-size: 40px;
+    line-height: 0px;
+  }
+  section.slideshow .detail .detail-item .background {
+    width: 100%;
+    height: 100%;
+  }
+  section.slideshow .detail .detail-item .background .info-content .info{
+    padding:30px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    top:-15%;
+    color: white;
+    font-size: 10px;
+    margin-top: 400px;
+  }
+  .chart{
+    width: 200px;
+    height:140px;
+    margin:auto auto;
+    display: inline-block;
+  }
+}
+  
