@@ -663,7 +663,7 @@ text-uppercase{
 }
  
 footer{
-    padding: 10px 15px;
+    padding: 40px 15px;
     background-color: #0c0c17;
 }
 
@@ -744,7 +744,18 @@ footer .button a:hover{
     background-color:#ffffff;
     color:#000000;
 }
-
+.copyright{
+    background-color:#0c0c17;
+    border-top:1px solid #1d1d27;
+    padding:15px;
+}
+.copyright p{
+    color:#838383;
+    margin:0;
+    text-align:center;
+    font-weight:400;
+    font-size:15px;
+}
 .ham-burger .fa{
     font-size: 20px;
     display: none;
