@@ -159,8 +159,6 @@ header.fixed  .navbar ul li a.active::before{
     padding: 0;
     margin: 0;
     left: 0;
-    top: 50%;
-    margin-top: -320px;
     z-index: 10;
   }
   
@@ -381,7 +379,6 @@ header.fixed  .navbar ul li a.active::before{
     padding: 0;
     margin: 20px;
     left: 0;
-    margin-top: -800px;
     z-index: 10;
   }
   section.slideshow ul.navigation li.navigation-item {
@@ -401,7 +398,7 @@ section.slideshow .detail .detail-item .background::before{
   section.slideshow .detail .detail-item .headline {
     position: absolute;
     display: block;
-    top: 35%;
+    top: 30%;
     left: 70%;
     overflow: visible;
     white-space: nowrap;
@@ -499,12 +496,10 @@ section.slideshow .detail .detail-item .background::before{
 
   section.slideshow ul.navigation {
     
-    width: 540px;
-    height: 540px;
+    width: 480px;
+    height: 480px;
     padding: 0;
-    margin: 20px;
     left: 0;
-    margin-top: -300px;
     z-index: 10;
   }
   section.slideshow ul.navigation li.navigation-item {
@@ -570,12 +565,10 @@ section.slideshow .detail .detail-item .background::before{
 @media(max-width: 500px){
    section.slideshow ul.navigation {
     
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     padding: 0;
-    margin: 20px;
     left: 0;
-    margin-top: -350px;
     z-index: 10;
   }
   section.slideshow ul.navigation li.navigation-item {
@@ -593,14 +586,14 @@ section.slideshow .detail .detail-item .background::before{
   section.slideshow .detail .detail-item .headline {
     position: absolute;
     display: block;
-    top: 40%;
+    top: 50%;
     left: 40%;
     overflow: visible;
     white-space: nowrap;
     box-sizing: border-box;
   }
   section.slideshow .detail .detail-item .headline .letter {
-    font-size: 50px;
+    font-size: 40px;
     line-height: 0px;
   }
   section.slideshow .detail .detail-item .background {
@@ -615,9 +608,9 @@ section.slideshow .detail .detail-item .background::before{
     flex: 0 0 100%;
     max-width: 100%;
     flex-wrap: wrap;
-    top:5%;
+    top:-10%;
     color: white;
-    font-size: 10px;
+    font-size: 8px;
   }
   .chart{
     width: 200px;
@@ -629,12 +622,11 @@ section.slideshow .detail .detail-item .background::before{
 @media(max-width: 360px){
    section.slideshow ul.navigation {
     
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     padding: 0;
     margin: 20px;
     left: 0;
-    margin-top: -250px;
     z-index: 10;
   }
   section.slideshow ul.navigation li.navigation-item {
@@ -661,7 +653,7 @@ section.slideshow .detail .detail-item .background::before{
     box-sizing: border-box;
   }
   section.slideshow .detail .detail-item .headline .letter {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 0px;
   }
   section.slideshow .detail .detail-item .background {
@@ -673,9 +665,9 @@ section.slideshow .detail .detail-item .background::before{
     flex: 0 0 100%;
     max-width: 100%;
     flex-wrap: wrap;
-    top:-15%;
+    top:-20%;
     color: white;
-    font-size: 10px;
+    font-size: 6px;
   }
   .chart{
     width: 200px;
@@ -684,4 +676,3 @@ section.slideshow .detail .detail-item .background::before{
     display: inline-block;
   }
 }
-  
