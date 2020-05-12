@@ -626,7 +626,7 @@ section.slideshow .detail .detail-item .background::before{
     display: inline-block;
   }
 }
-@media(max-height: 360px){
+@media(max-width: 360px){
    section.slideshow ul.navigation {
     
     width: 300px;
