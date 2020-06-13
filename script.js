@@ -1,5 +1,5 @@
 const filterButtons=document.querySelector("#filter-btns").children;
-const items=document.querySelector(".gallery-gallery").children;
+//const items=document.querySelector(".gallery-gallery").children;
 
 
 
@@ -44,7 +44,7 @@ closeLightbox.addEventListener("click",function(){
 })
 
 
-const gallery=document.querySelector(".gallery-gallery");
+/*const gallery=document.querySelector(".gallery-gallery");
 const galleryItem=gallery.querySelectorAll(".item");
 
 
@@ -54,7 +54,7 @@ galleryItem.forEach(function(element){
 		lightbox.classList.add("show");
 		lightboxImage.src=element.querySelector("img").getAttribute("src")
 	})
-})
+})*/
 
   window.onscroll=function(){
   	 const docScrollTop=document.documentElement.scrollTop;
