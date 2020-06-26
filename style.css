@@ -873,10 +873,6 @@ footer .button a:hover{
     max-width: 100%;
     padding-right: 40px;
 }
-.skills .img  {
-    flex:0 0 100%;
-    max-width: 100%;
-}
 .gallery .gallery-gallery .item {
     flex-wrap: 0 0 100%;
     max-width: 100%;
@@ -996,10 +992,16 @@ footer .button a:hover{
     max-width: 100%;
     padding-right: 40px;
 }
-.skills .img  {
-    flex:0 0 100%;
-    max-width: 100%;
+.skills  .box{
+    height:260px;
+    width:140px;
 }
+.skills  .box1{
+
+    flex: 0 0 60%;
+    max-width: 100%;
+
+ }
 .gallery .gallery-gallery .item {
     flex-wrap: 0 0 50%;
     max-width: 50%;
@@ -1042,5 +1044,23 @@ footer .button a:hover{
 .about .about-container .about-text h1{
     flex: 0 0 100%;
     max-width: 100%;
+}
+    .skills .skills-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 40px;
+}
+.skills  .box{
+    height:260px;
+    width:100px;}
+.skills  .box1{
+
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding:8px;
+
+ }
+ .skills .box h3 {
+    margin: 110px 3px;
 }
 }
