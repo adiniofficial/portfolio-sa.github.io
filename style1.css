@@ -302,7 +302,7 @@ header.fixed  .navbar ul li a.active::before{
   }
   
   section.slideshow .detail .detail-item .background .info-content .info{
-    padding:30px;
+   padding:30px;
     flex: 0 0 40%;
     max-width: 40%;
     text-align: center;
@@ -310,6 +310,7 @@ header.fixed  .navbar ul li a.active::before{
     position: absolute;
     right: 110px;
     color: white;
+    top: 15%;
   }
 
 
