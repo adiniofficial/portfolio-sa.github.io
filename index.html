@@ -128,16 +128,15 @@
         <!-- slideshow:navigation:item END -->
 
         <!-- slideshow:navigation:item START -->
-        <li class="navigation-item">
-          <span class="rotate-holder"></span>
-          <span class="background-holder" style="background-image: url(assets/img/birth.jpg);"></span>
-        </li>
+        
+       
+        
        
         <li class="navigation-item">
           <span class="rotate-holder"></span>
-          <span class="background-holder" style="background-image: url(assets/img/school.jpg);"></span>
+          <span class="background-holder" style="background-image: url(assets/img/ssc.png);"></span>
         </li>
-       
+      
         <li class="navigation-item">
           <span class="rotate-holder"></span>
           <span class="background-holder" style="background-image: url(assets/img/sexam.jpeg);"></span>
@@ -145,12 +144,11 @@
       
         <li class="navigation-item">
           <span class="rotate-holder"></span>
-          <span class="background-holder" style="background-image: url(assets/img/exam.jpg);"></span>
+          <span class="background-holder" style="background-image: url(assets/img/college.jpg);"></span>
         </li>
-      
         <li class="navigation-item">
           <span class="rotate-holder"></span>
-          <span class="background-holder" style="background-image: url(assets/img/college.jpg);"></span>
+          <span class="background-holder" style="background-image: url(assets/img/goal.png);"></span>
         </li>
 
       </ul>
@@ -166,46 +164,23 @@
             </div>
         </div>
 
-        <div class="detail-item">
-            <div class="headline">BIRTH</div>
-            <div class="background" style="background-image: url(assets/img/1.png);">
-                <div class="info-content" >
-                    <div class="info"><h2>I was born on 16 November 1999 in Mumbai, Maharashtra.</h2></div>
-                </div>
-            </div>
-        </div>
+        
         <!-- slideshow:details END -->
         
         <!-- slideshow:details START -->
-        <div class="detail-item">
-            <div class="headline">SCHOOL</div>
-            <div class="background" style="background-image: url(assets/img/2.jpg);">
-                <div class="info-content" >
-                    <div class="info">
-                        <h3>Extracurricular Activities, competative exams in school enhances our personality, wit, knowledge, 
-                        builds up our spirit, increase positive self-development.</h3>
-                        <h4>Some of my involvements:</h4>
-                        <ul>
-                        <li>4th and 7th standard scholarship holder</li> 
-                        <li>6th standard homi bhabha silver medalist</li>
-                        <li>National Level Judo Player</li>
-                        <li>Active participation in all the school sports, cultural events</li>
-                        </ul>
-                    </div>
-                </div> 
-            </div>
-        </div>
+        
         <!-- slideshow:details END -->
         
         <!-- slideshow:details START -->
         <div class="detail-item">
             <div class="headline">SSC</div>
-            <div class="background" style="background-image: url(assets/img/s.jpg);">
+            <div class="background" >
                 <div class="info-content" >
                     <div class="info" style="color:black;">
                         <h1>SSC BOARD EXAMINATION</h1>
-                        <h3>School Name : Saraswati Secondary School, Naupada, Thane</h3>
-                        <h3>Percentage : 92%</h3>
+                        <h3>{{ssc.school}}</h3>
+                        <h3>{{ssc.board}}</h3>
+                        <h3>percentage:{{ssc.percentage}}</h3>
                     </div>
                 </div>       
             </div>
@@ -215,13 +190,13 @@
         <!-- slideshow:details START -->
         <div class="detail-item">
             <div class="headline">HSC</div>
-            <div class="background" style="background-image: url(assets/img/7.jpeg);">
+            <div class="background" >
                 <div class="info-content" >
-                    <div class="info">
+                    <div class="info" style="color:black;">
                         <h1>HSC BOARD EXAMINATION</h1>
-                        <h3>Jr College Name: K J Somaiya College Of Science And Commerce, Vidyavihar</h3>
-                        <h3>Percentage : 78%</h3>
-                        <h4>Participation in various inter college competitions such as elocation and college fest activities.</h4>
+                        <h3>{{hsc.school}}</h3>
+                        <h3>{{hsc.board}}</h3>
+                        <h3>percentage:{{hsc.percentage}}</h3>
                     </div>
                 </div> 
             </div>
@@ -231,15 +206,28 @@
         <!-- slideshow:details START -->
         <div class="detail-item">
             <div class="headline">BE</div>
-            <div class="background" style="background-image: url(assets/img/p.jpg);">
+            <div class="background" >
                 <div class="info-content" >
-                    <div class="info">
+                    <div class="info" style="color:black;">
                         <h1>Bachelor of Engineering</h1>
-                        <h3>College Name : Pillai College of Engineering, New Panvel</h3>
-                        <h3>pointers : </h3>
+                        <h3>{{grad.college}}</h3>
+                        <h3>{{grad.branch}} </h3>
+                        <h3>{{grad.year}}</h3>
+                        <h3>CGPI{{grad.CGPI}}</h3>
                         <div id="curve_chart" class="chart" ></div>
                     </div>
                 </div> 
+            </div>
+        </div>
+        <div class="detail-item">
+            <div class="headline">Goals</div>
+            <div class="background" >
+                <div class="info-content" >
+                    <div class="info" style="color:black;"><h2>Long Term</h2>
+                        <p>Become world leader</p>
+                        <h2>Short Term</h2>
+                        <p>Become world leader</p></div>
+                </div>
             </div>
         </div>
 
@@ -289,7 +277,6 @@
     <script src="assets/js/demo.js"></script>
 
 <!--lifestory section-->
-
 
 
 
