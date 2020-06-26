@@ -227,27 +227,25 @@ text-uppercase{
 .skills{
     padding: 100px 20px;
     background-color: #f0f0f0;
- }
- .skills div{
+}
+.skills div{
     justify-content: center;
     margin-top: 10px;
- }
- .skills .skills-content{
+}
+.skills .skills-content{
 
     flex: 0 0 100%;
     max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
- }
+}
  .skills  .box{
     height:260px;
     width:200px;
     background-color: #d6e9f8;
     border:1px solid #000000;
-
- }
+}
 
  .skills  .box h3{
 
